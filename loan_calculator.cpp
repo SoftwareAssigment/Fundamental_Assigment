@@ -49,7 +49,7 @@ int main() {
 }
 
 void calculate_loan(float* loan, float* interest, float* this_month_interest, float* monthly_payment) {
-   //calculate this month's interest, monthly payment and remaining loan
+   //Calculate this month's interest, monthly payment and remaining loan
     *this_month_interest = (*loan * *interest) / 12;
 
     if(*loan + *this_month_interest >= *monthly_payment){
