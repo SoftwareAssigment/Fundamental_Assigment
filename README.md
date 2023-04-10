@@ -1,1 +1,1 @@
-This is a fundamental of progeaming group repo
+This is a fundamental of programing group repo
