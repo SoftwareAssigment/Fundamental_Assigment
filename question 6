@@ -14,7 +14,7 @@ int main() {
     char choice;
 
     program:
-    cout << "Enter temperature: ";
+    cout << "Enter temperature form 0-999: ";
     cin >> temperature;
     if ((temperature < 0 )|| (temperature >999)){
         cout<<"Wrong input"<<endl;
@@ -44,8 +44,8 @@ void closest_temperature(int temperature, int* ans) {
     for (int i = 2; i >= 0; i--) {
         int dig = dummy_temp / pow(10, i); 
         if (dig == 1 || dig == 4 || dig == 7) {
-            ans[0] = (int(temperature / pow(10, i))) * pow(10, i) + pow(10, i);
-            ans[1] = (int(temperature / pow(10, i))) * pow(10, i) - 1;
+            ans[0] = temperature - dummy_temp +(dig + 1)*pow(10,i);
+            ans[1] = temperature - dummy_temp +(dig )*pow(10,i) - 1;
             return;
         }
         dummy_temp -= dig * pow(10, i);
