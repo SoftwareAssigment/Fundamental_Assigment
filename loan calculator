@@ -1,8 +1,9 @@
-// Define a function that calculates the loan payment
+
 #include <iostream>
 #include <string>
 #include <iomanip>
 using namespace std;
+// Define a function that calculates the loan payment
 void calculate_loan(float* loan, float* interest, float* this_month_interest, float* monthly_payment, float* remaining_monthly_payment);
 
 int main() {
