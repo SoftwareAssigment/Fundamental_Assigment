@@ -7,7 +7,7 @@ using namespace std;
 void closest_temperature(int temperature, int* ans);
 
 int main() {
-    string def_program = "This program takes a degree from 0 - 999 and returns the closest degree that doesn't have 1, 4 & 7 in its digit";
+    string def_program = "This program takes a degree from 0 - 999 and returns the closest degree that doesn't have 1, 4 & 7 in its digit: ";
     cout << def_program << "\n\n";
     
     int temperature;
