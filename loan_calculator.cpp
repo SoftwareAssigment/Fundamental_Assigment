@@ -1,3 +1,4 @@
+//calculate loan
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -28,7 +29,8 @@ int main() {
    }
    cout << "\nMONTH \tMONTHLY PAYMENT \tREMAINING LOAN\n";
    cout << "----------------------------------------\n";
-    while (loan > 0){
+    while (loan > 0)
+    {
         calculate_loan(&loan, &interest, &this_month_interest, &monthly_payment);
         
         cout << fixed << setprecision(2) << setw(3) << month;
@@ -50,7 +52,7 @@ void calculate_loan(float* loan, float* interest, float* this_month_interest, fl
    //calculate this month's interest, monthly payment and remaining loan
     *this_month_interest = (*loan * *interest) / 12;
 
-    if (*loan + *this_month_interest >= *monthly_payment){
+    if(*loan + *this_month_interest >= *monthly_payment){
             *loan -= (*monthly_payment - *this_month_interest);
         }
 
