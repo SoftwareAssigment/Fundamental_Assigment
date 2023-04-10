@@ -53,3 +53,4 @@ void closest_temperature(int temperature, int* ans) {
     
     ans[0] = temperature;
     ans[1] = temperature;
+}
