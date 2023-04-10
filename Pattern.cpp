@@ -1,6 +1,6 @@
 #include <iostream>
-#include<cmath>
-#include<algorithm>
+#include <cmath>
+#include <algorithm>
 using namespace std;
 int main() {
     char n;
