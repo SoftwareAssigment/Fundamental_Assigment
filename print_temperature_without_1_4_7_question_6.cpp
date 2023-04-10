@@ -1,4 +1,4 @@
-// print the closest temperature with out the number 1,4 and 7
+/*print the closest temperature to the upper or lower with out the number 1,4 and 7*/
 #include <iostream>
 #include <cmath>
 #include <string>
