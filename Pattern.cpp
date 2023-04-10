@@ -5,9 +5,9 @@ using namespace std;
 int main() {
     char n;
     char *ptr;
-    cout<<"Enter any value you want: \n";
+    cout<<"Enter any value you want expet e to print pattern: \n";
     cin>>n;
-    if (n>='1'){
+    if (n !='e'){
     for(int i = 0; i < 15; i++){
         for(int j = 0; j < 15; j++){
             int num =  7 - abs(7 - j);
