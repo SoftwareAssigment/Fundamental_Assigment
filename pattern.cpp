@@ -1,4 +1,4 @@
-// create a dimond pattern.
+// Create a diamond pattern.
 #include <iostream>
 #include <cmath>
 #include <algorithm>
