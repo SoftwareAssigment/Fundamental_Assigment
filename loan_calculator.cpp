@@ -1,4 +1,4 @@
-//calculate loan
+//calculate loan interest rate included.
 #include <iostream>
 #include <string>
 #include <iomanip>
