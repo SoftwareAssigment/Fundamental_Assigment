@@ -1,4 +1,4 @@
-// Create a diamond pattern.
+// Create a diamond pattern using alphabet letters.
 #include <iostream>
 #include <cmath>
 #include <algorithm>
