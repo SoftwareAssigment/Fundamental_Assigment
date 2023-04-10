@@ -1,9 +1,8 @@
-
 #include <iostream>
 #include <string>
 #include <iomanip>
 using namespace std;
-void calculate_loan(float* loan, float* interest, float* this_month_interest, float* monthly_payment, float* remaining_monthly_payment);
+void calculate_loan(float* loan, float* interest, float* this_month_interest, float* monthly_payment);
 
 int main() {
    string def_program = "This program takes loan amount and interest rate as an input and calculates the monthly payment and the remening loan for each month";
@@ -28,7 +27,7 @@ int main() {
    cout << "\nMONTH \tMONTHLY PAYMENT \tREMAINING LOAN\n";
    cout << "----------------------------------------\n";
     while (loan > 0){
-        calculate_loan(&loan, &interest, &this_month_interest, &monthly_payment, &remaining_month_payment);
+        calculate_loan(&loan, &interest, &this_month_interest, &monthly_payment);
         
         cout << fixed << setprecision(2) << setw(3) << month;
         cout << fixed << setprecision(2) << setw(17) << monthly_payment;
@@ -45,21 +44,16 @@ int main() {
    
 }
 
-void calculate_loan(float* loan, float* interest, float* this_month_interest, float* monthly_payment, float* remaining_monthly_payment) {
-    
+void calculate_loan(float* loan, float* interest, float* this_month_interest, float* monthly_payment) {
     *this_month_interest = (*loan * *interest) / 12;
 
-    
-    *remaining_monthly_payment = *monthly_payment - *this_month_interest;
+    if (*loan + *this_month_interest >= *monthly_payment){
+            *loan -= (*monthly_payment - *this_month_interest);
+        }
 
-    
-    if (*loan >= *remaining_monthly_payment) {
-        *loan -= *remaining_monthly_payment;
-    }
-    else {
-        *monthly_payment = *loan;
+    else{
+        *monthly_payment = *this_month_interest + *loan;
         *loan = 0;
     }
+    return;
 }
-
-
