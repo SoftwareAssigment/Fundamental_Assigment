@@ -2,6 +2,7 @@
 #include <string>
 #include <iomanip>
 using namespace std;
+// Define a function that calculates the loan payment
 void calculate_loan(float* loan, float* interest, float* this_month_interest, float* monthly_payment);
 
 int main() {
@@ -20,6 +21,7 @@ int main() {
    float this_month_interest;
    float remaining_month_payment;
    int month = 1;
+   // Check if the loan can ever be paid off
    if (interest >= 0.6){
       cout <<"This loan can not be paid off forever since the interest rate is greater than or equal to the paying rate";
       goto end_program;
@@ -45,6 +47,7 @@ int main() {
 }
 
 void calculate_loan(float* loan, float* interest, float* this_month_interest, float* monthly_payment) {
+   //calculate this month's interest, monthly payment and remaining loan
     *this_month_interest = (*loan * *interest) / 12;
 
     if (*loan + *this_month_interest >= *monthly_payment){
