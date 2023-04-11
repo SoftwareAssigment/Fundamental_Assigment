@@ -1,7 +1,6 @@
 // Create a diamond pattern using alphabet letters.
 #include <iostream>
 #include <cmath>
-#include <algorithm>
 using namespace std;
 int main() {
     char n;
