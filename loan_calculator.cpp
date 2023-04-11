@@ -45,6 +45,7 @@ int main() {
       cin>>choice;
       if(choice != 'Y' && choice != 'y')
          goto program;
+      return 0;
    
 }
 
