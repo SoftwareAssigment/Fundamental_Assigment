@@ -16,7 +16,7 @@ int main() {
     char choice;
 
     program:
-    cout << "Enter temperature form 0-999: ";
+    cout << "Enter temperature from 0-999: ";
     cin >> temperature;
     if ((temperature < 0 )|| (temperature >999)){
         cout<<"Wrong input"<<endl;
